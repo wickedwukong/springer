@@ -10,6 +10,7 @@ class Draw(instructionInput: Source, output: Writer) {
     import Drawings._
     val printer = new PrintWriter(output)
     printer.print("enter command:")
+    printer.flush()
 
     val display = makeDisplay(printer) _
 
@@ -32,6 +33,7 @@ class Draw(instructionInput: Source, output: Writer) {
     }
     printer.println
     printer.print("enter command:")
+    printer.flush()
 
     canvas
   }
