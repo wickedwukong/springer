@@ -3,8 +3,8 @@ package springer.interview
 object Drawings {
 
   def toDrawing: String => List[List[String]] => List[List[String]] = {
-    rawIntruction => {
-      rawIntruction.split(" ").toList match {
+    rawInstruction => {
+      rawInstruction.split(" ").toList match {
         case "C" :: tail => {
           val canvasDimension: List[Int] = tail.take(2).map(_.toInt)
           canvasDrawing(canvasDimension(0), canvasDimension(1))
