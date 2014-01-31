@@ -43,22 +43,5 @@ object Drawings {
       }.toList
     }
   }
-
-  def toLists(raw: String): List[List[String]] = {
-    val canvasDimension: Array[Int] = raw.split(" ").tail.take(2).map(_.toInt)
-
-    val (xAxis, yAxis) = (canvasDimension(0), canvasDimension(1))
-
-    val numberOfRows = yAxis + 2
-    val numberOfColumns = xAxis + 2
-
-    (0 until numberOfRows).map {
-      case x if x == 0 || x == numberOfRows - 1 => 0.until(numberOfColumns).map(_ => "-").toList
-      case _ => 0.until(numberOfColumns).map {
-        case x if x == 0 || x == numberOfColumns - 1 => "|"
-        case _ => " "
-      }.toList
-    }.toList
-  }
 }
 
