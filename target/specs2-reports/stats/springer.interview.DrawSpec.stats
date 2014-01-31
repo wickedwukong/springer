@@ -1,0 +1,111 @@
+<springer.interview.DrawSpec-stats timestamp="1391181326525"><stats time="572" expectations="1" successes="1" examples="1"></stats></springer.interview.DrawSpec-stats>
+<springer.interview.DrawSpec-stats timestamp="1391181579835"><stats time="26" expectations="1" successes="1" examples="1"></stats></springer.interview.DrawSpec-stats>
+<springer.interview.DrawSpec-stats timestamp="1391181593603"><stats time="23" expectations="1" successes="1" examples="1"></stats></springer.interview.DrawSpec-stats>
+<springer.interview.DrawSpec-stats timestamp="1391181627064"><stats time="43" expectations="1" successes="1" examples="1"></stats></springer.interview.DrawSpec-stats>
+<springer.interview.DrawSpec-results timestamp="1391183251757"><result location="springer.interview.DrawSpec (DrawSpec.scala:20)" id="-1252393756"><stats time="74" expectations="1" failures="1" examples="1"></stats></result>
+</springer.interview.DrawSpec-results>
+<springer.interview.DrawSpec-stats timestamp="1391183251777"><stats time="24" expectations="2" failures="1" successes="1" examples="2"><trend><stats time="24" expectations="1" failures="1" examples="1"></stats></trend></stats></springer.interview.DrawSpec-stats>
+<springer.interview.DrawSpec-results timestamp="1391183394746"><result location="springer.interview.DrawSpec (DrawSpec.scala:10)" id="520827967"><stats time="65" expectations="1" failures="1" examples="1"></stats></result>
+<result location="springer.interview.DrawSpec (DrawSpec.scala:20)" id="-1252393756"><stats time="65" expectations="1" failures="1" examples="1"></stats></result>
+</springer.interview.DrawSpec-results>
+<springer.interview.DrawSpec-stats timestamp="1391183394890"><stats time="23" expectations="2" failures="2" examples="2"><trend><stats time="23" failures="1" successes="-1"></stats></trend></stats></springer.interview.DrawSpec-stats>
+<springer.interview.DrawSpec-results timestamp="1391183585340"><result location="springer.interview.DrawSpec (DrawSpec.scala:10)" id="520827967"><stats time="68" expectations="1" failures="1" examples="1"></stats></result>
+</springer.interview.DrawSpec-results>
+<springer.interview.DrawSpec-stats timestamp="1391183585354"><stats time="24" expectations="2" failures="1" successes="1" examples="2"><trend><stats time="24" failures="-1" successes="1"></stats></trend></stats></springer.interview.DrawSpec-stats>
+<springer.interview.DrawSpec-results timestamp="1391183682787"><result location="springer.interview.DrawSpec (DrawSpec.scala:10)" id="520827967"><stats time="49" expectations="1" failures="1" examples="1"></stats></result>
+</springer.interview.DrawSpec-results>
+<springer.interview.DrawSpec-stats timestamp="1391183682836"><stats time="26" expectations="2" failures="1" successes="1" examples="2"></stats></springer.interview.DrawSpec-stats>
+<springer.interview.DrawSpec-results timestamp="1391183726116"><result location="springer.interview.DrawSpec (DrawSpec.scala:10)" id="520827967"><stats time="63" expectations="1" failures="1" examples="1"></stats></result>
+</springer.interview.DrawSpec-results>
+<springer.interview.DrawSpec-stats timestamp="1391183726253"><stats time="38" expectations="2" failures="1" successes="1" examples="2"></stats></springer.interview.DrawSpec-stats>
+<springer.interview.DrawSpec-results timestamp="1391183774720"><result location="springer.interview.DrawSpec (DrawSpec.scala:10)" id="520827967"><stats time="62" expectations="1" failures="1" examples="1"></stats></result>
+</springer.interview.DrawSpec-results>
+<springer.interview.DrawSpec-stats timestamp="1391183774736"><stats time="24" expectations="2" failures="1" successes="1" examples="2"></stats></springer.interview.DrawSpec-stats>
+<springer.interview.DrawSpec-results timestamp="1391183795969"><result location="springer.interview.DrawSpec (DrawSpec.scala:10)" id="520827967"><stats time="49" expectations="1" failures="1" examples="1"></stats></result>
+</springer.interview.DrawSpec-results>
+<springer.interview.DrawSpec-stats timestamp="1391183796023"><stats time="26" expectations="2" failures="1" successes="1" examples="2"></stats></springer.interview.DrawSpec-stats>
+<springer.interview.DrawSpec-results timestamp="1391186760451"><result location="springer.interview.DrawSpec (DrawSpec.scala:10)" id="520827967"><stats time="87" expectations="1" errors="1" examples="1"></stats></result>
+<result location="springer.interview.DrawSpec (DrawSpec.scala:20)" id="-1252393756"><stats time="115" expectations="1" failures="1" examples="1"></stats></result>
+</springer.interview.DrawSpec-results>
+<springer.interview.DrawSpec-stats timestamp="1391186760461"><stats time="22" expectations="2" failures="1" errors="1" examples="2"><trend><stats time="22" errors="1" successes="-1"></stats></trend></stats></springer.interview.DrawSpec-stats>
+<springer.interview.DrawSpec-results timestamp="1391186818270"><result location="springer.interview.DrawSpec (DrawSpec.scala:10)" id="520827967"><stats time="36" expectations="1" errors="1" examples="1"></stats></result>
+<result location="springer.interview.DrawSpec (DrawSpec.scala:20)" id="-1252393756"><stats time="63" expectations="1" failures="1" examples="1"></stats></result>
+</springer.interview.DrawSpec-results>
+<springer.interview.DrawSpec-stats timestamp="1391186818324"><stats time="28" expectations="2" failures="1" errors="1" examples="2"></stats></springer.interview.DrawSpec-stats>
+<springer.interview.DrawSpec-results timestamp="1391187087396"><result location="springer.interview.DrawSpec (DrawSpec.scala:10)" id="520827967"><stats time="63" expectations="1" failures="1" examples="1"></stats></result>
+<result location="springer.interview.DrawSpec (DrawSpec.scala:20)" id="-1252393756"><stats time="62" expectations="1" failures="1" examples="1"></stats></result>
+</springer.interview.DrawSpec-results>
+<springer.interview.DrawSpec-stats timestamp="1391187087452"><stats time="27" expectations="2" failures="2" examples="2"><trend><stats time="27" failures="1" errors="-1"></stats></trend></stats></springer.interview.DrawSpec-stats>
+<springer.interview.DrawSpec-results timestamp="1391187143388"><result location="springer.interview.DrawSpec (DrawSpec.scala:20)" id="-1252393756"><stats time="50" expectations="1" failures="1" examples="1"></stats></result>
+</springer.interview.DrawSpec-results>
+<springer.interview.DrawSpec-stats timestamp="1391187143446"><stats time="28" expectations="2" failures="1" successes="1" examples="2"><trend><stats time="28" failures="-1" successes="1"></stats></trend></stats></springer.interview.DrawSpec-stats>
+<springer.interview.DrawSpec-results timestamp="1391187295952"><result location="springer.interview.DrawSpec (DrawSpec.scala:20)" id="-1252393756"><stats time="131" expectations="1" failures="1" examples="1"></stats></result>
+</springer.interview.DrawSpec-results>
+<springer.interview.DrawSpec-stats timestamp="1391187296008"><stats time="27" expectations="2" failures="1" successes="1" examples="2"></stats></springer.interview.DrawSpec-stats>
+<springer.interview.DrawSpec-results timestamp="1391187396579"><result location="springer.interview.DrawSpec (DrawSpec.scala:10)" id="-308859777"><stats time="83" expectations="1" failures="1" examples="1"></stats></result>
+<result location="springer.interview.DrawSpec (DrawSpec.scala:20)" id="-1252393756"><stats time="90" expectations="1" failures="1" examples="1"></stats></result>
+</springer.interview.DrawSpec-results>
+<springer.interview.DrawSpec-stats timestamp="1391187396638"><stats time="60" expectations="2" failures="2" examples="2"><trend><stats time="60" failures="1" successes="-1"></stats></trend></stats></springer.interview.DrawSpec-stats>
+<springer.interview.DrawSpec-results timestamp="1391187631122"><result location="springer.interview.DrawSpec (DrawSpec.scala:20)" id="-1252393756"><stats time="113" expectations="1" failures="1" examples="1"></stats></result>
+</springer.interview.DrawSpec-results>
+<springer.interview.DrawSpec-stats timestamp="1391187631177"><stats time="28" expectations="2" failures="1" successes="1" examples="2"><trend><stats time="28" failures="-1" successes="1"></stats></trend></stats></springer.interview.DrawSpec-stats>
+<springer.interview.DrawSpec-results timestamp="1391187818932"><result location="springer.interview.DrawSpec (DrawSpec.scala:10)" id="-308859777"><stats time="65" expectations="1" failures="1" examples="1"></stats></result>
+<result location="springer.interview.DrawSpec (DrawSpec.scala:20)" id="-1252393756"><stats time="65" expectations="1" failures="1" examples="1"></stats></result>
+</springer.interview.DrawSpec-results>
+<springer.interview.DrawSpec-stats timestamp="1391187819001"><stats time="38" expectations="2" failures="2" examples="2"><trend><stats time="38" failures="1" successes="-1"></stats></trend></stats></springer.interview.DrawSpec-stats>
+<springer.interview.DrawSpec-results timestamp="1391187904356"><result location="springer.interview.DrawSpec (DrawSpec.scala:10)" id="-308859777"><stats time="46" expectations="1" failures="1" examples="1"></stats></result>
+<result location="springer.interview.DrawSpec (DrawSpec.scala:20)" id="-1252393756"><stats time="45" expectations="1" failures="1" examples="1"></stats></result>
+</springer.interview.DrawSpec-results>
+<springer.interview.DrawSpec-stats timestamp="1391187904623"><stats time="26" expectations="2" failures="2" examples="2"></stats></springer.interview.DrawSpec-stats>
+<springer.interview.DrawSpec-results timestamp="1391187966202"><result location="springer.interview.DrawSpec (DrawSpec.scala:10)" id="-308859777"><stats time="23609" expectations="1" failures="1" examples="1"></stats></result>
+<result location="springer.interview.DrawSpec (DrawSpec.scala:20)" id="-1252393756"><stats time="23609" expectations="1" failures="1" examples="1"></stats></result>
+</springer.interview.DrawSpec-results>
+<springer.interview.DrawSpec-stats timestamp="1391187966261"><stats time="30" expectations="2" failures="2" examples="2"></stats></springer.interview.DrawSpec-stats>
+<springer.interview.DrawSpec-results timestamp="1391188001757"><result location="springer.interview.DrawSpec (DrawSpec.scala:10)" id="-308859777"><stats time="45" expectations="1" failures="1" examples="1"></stats></result>
+<result location="springer.interview.DrawSpec (DrawSpec.scala:20)" id="-1252393756"><stats time="45" expectations="1" failures="1" examples="1"></stats></result>
+</springer.interview.DrawSpec-results>
+<springer.interview.DrawSpec-stats timestamp="1391188001809"><stats time="27" expectations="2" failures="2" examples="2"></stats></springer.interview.DrawSpec-stats>
+<springer.interview.DrawSpec-results timestamp="1391188024835"><result location="springer.interview.DrawSpec (DrawSpec.scala:10)" id="-308859777"><stats time="3967" expectations="1" failures="1" examples="1"></stats></result>
+<result location="springer.interview.DrawSpec (DrawSpec.scala:20)" id="-1252393756"><stats time="3966" expectations="1" failures="1" examples="1"></stats></result>
+</springer.interview.DrawSpec-results>
+<springer.interview.DrawSpec-stats timestamp="1391188024892"><stats time="29" expectations="2" failures="2" examples="2"></stats></springer.interview.DrawSpec-stats>
+<springer.interview.DrawSpec-results timestamp="1391188191341"><result location="springer.interview.DrawSpec (DrawSpec.scala:20)" id="-1252393756"><stats time="49" expectations="1" failures="1" examples="1"></stats></result>
+</springer.interview.DrawSpec-results>
+<springer.interview.DrawSpec-stats timestamp="1391188191397"><stats time="28" expectations="2" failures="1" successes="1" examples="2"><trend><stats time="28" failures="-1" successes="1"></stats></trend></stats></springer.interview.DrawSpec-stats>
+<springer.interview.DrawSpec-results timestamp="1391188223632"><result location="springer.interview.DrawSpec (DrawSpec.scala:20)" id="-1252393756"><stats time="45" expectations="1" failures="1" examples="1"></stats></result>
+</springer.interview.DrawSpec-results>
+<springer.interview.DrawSpec-stats timestamp="1391188223689"><stats time="26" expectations="2" failures="1" successes="1" examples="2"></stats></springer.interview.DrawSpec-stats>
+<springer.interview.DrawSpec-results timestamp="1391188397649"><result location="springer.interview.DrawSpec (DrawSpec.scala:20)" id="-1252393756"><stats time="44" expectations="1" failures="1" examples="1"></stats></result>
+</springer.interview.DrawSpec-results>
+<springer.interview.DrawSpec-stats timestamp="1391188397726"><stats time="26" expectations="2" failures="1" successes="1" examples="2"></stats></springer.interview.DrawSpec-stats>
+<springer.interview.DrawSpec-results timestamp="1391188808097"><result location="springer.interview.DrawSpec (DrawSpec.scala:20)" id="-1252393756"><stats time="63" expectations="1" failures="1" examples="1"></stats></result>
+</springer.interview.DrawSpec-results>
+<springer.interview.DrawSpec-stats timestamp="1391188808156"><stats time="26" expectations="2" failures="1" successes="1" examples="2"></stats></springer.interview.DrawSpec-stats>
+<springer.interview.DrawSpec-results timestamp="1391188853390"><result location="springer.interview.DrawSpec (DrawSpec.scala:20)" id="-1252393756"><stats time="188" expectations="1" failures="1" examples="1"></stats></result>
+</springer.interview.DrawSpec-results>
+<springer.interview.DrawSpec-stats timestamp="1391188853408"><stats time="56" expectations="2" failures="1" successes="1" examples="2"></stats></springer.interview.DrawSpec-stats>
+<springer.interview.DrawSpec-results timestamp="1391188865690"><result location="springer.interview.DrawSpec (DrawSpec.scala:20)" id="-1252393756"><stats time="43" expectations="1" failures="1" examples="1"></stats></result>
+</springer.interview.DrawSpec-results>
+<springer.interview.DrawSpec-stats timestamp="1391188865751"><stats time="28" expectations="2" failures="1" successes="1" examples="2"></stats></springer.interview.DrawSpec-stats>
+<springer.interview.DrawSpec-results timestamp="1391188884916"><result location="springer.interview.DrawSpec (DrawSpec.scala:20)" id="-1252393756"><stats time="45" expectations="1" failures="1" examples="1"></stats></result>
+</springer.interview.DrawSpec-results>
+<springer.interview.DrawSpec-stats timestamp="1391188885065"><stats time="26" expectations="2" failures="1" successes="1" examples="2"></stats></springer.interview.DrawSpec-stats>
+<springer.interview.DrawSpec-results timestamp="1391189892006"><result location="springer.interview.DrawSpec (DrawSpec.scala:20)" id="-1252393756"><stats time="75" expectations="1" failures="1" examples="1"></stats></result>
+</springer.interview.DrawSpec-results>
+<springer.interview.DrawSpec-stats timestamp="1391189892025"><stats time="24" expectations="2" failures="1" successes="1" examples="2"></stats></springer.interview.DrawSpec-stats>
+<springer.interview.DrawSpec-results timestamp="1391189952165"><result location="springer.interview.DrawSpec (DrawSpec.scala:20)" id="-1252393756"><stats time="63" expectations="1" failures="1" examples="1"></stats></result>
+</springer.interview.DrawSpec-results>
+<springer.interview.DrawSpec-stats timestamp="1391189952227"><stats time="39" expectations="2" failures="1" successes="1" examples="2"></stats></springer.interview.DrawSpec-stats>
+<springer.interview.DrawSpec-results timestamp="1391190326408"><result location="springer.interview.DrawSpec (DrawSpec.scala:20)" id="-1252393756"><stats time="46" expectations="1" failures="1" examples="1"></stats></result>
+</springer.interview.DrawSpec-results>
+<springer.interview.DrawSpec-stats timestamp="1391190326472"><stats time="27" expectations="2" failures="1" successes="1" examples="2"></stats></springer.interview.DrawSpec-stats>
+<springer.interview.DrawSpec-results timestamp="1391190369953"><result location="springer.interview.DrawSpec (DrawSpec.scala:20)" id="-1252393756"><stats time="45" expectations="1" failures="1" examples="1"></stats></result>
+</springer.interview.DrawSpec-results>
+<springer.interview.DrawSpec-stats timestamp="1391190370026"><stats time="26" expectations="2" failures="1" successes="1" examples="2"></stats></springer.interview.DrawSpec-stats>
+<springer.interview.DrawSpec-results timestamp="1391190493377"><result location="springer.interview.DrawSpec (DrawSpec.scala:20)" id="-1252393756"><stats time="53" expectations="1" failures="1" examples="1"></stats></result>
+</springer.interview.DrawSpec-results>
+<springer.interview.DrawSpec-stats timestamp="1391190493472"><stats time="26" expectations="2" failures="1" successes="1" examples="2"></stats></springer.interview.DrawSpec-stats>
+<springer.interview.DrawSpec-stats timestamp="1391190626964"><stats time="23" expectations="2" successes="2" examples="2"><trend><stats time="23" failures="-1" successes="1"></stats></trend></stats></springer.interview.DrawSpec-stats>
+<springer.interview.DrawSpec-stats timestamp="1391190886090"><stats time="25" expectations="2" successes="2" examples="2"></stats></springer.interview.DrawSpec-stats>
+<springer.interview.DrawSpec-stats timestamp="1391190911929"><stats time="23" expectations="2" successes="2" examples="2"></stats></springer.interview.DrawSpec-stats>
+<springer.interview.DrawSpec-stats timestamp="1391191076973"><stats time="28" expectations="2" successes="2" examples="2"></stats></springer.interview.DrawSpec-stats>

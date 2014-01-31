@@ -1,0 +1,19 @@
+exit
+gen-idea
+setup
+mkdir src
+gen-idea
+exit
+gen-idea
+reload
+gen-idea
+test
+~testQuick
+exit
+test
+~testQuick
+test
+console
+test
+~testQuick
+exit
