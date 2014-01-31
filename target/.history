@@ -17,3 +17,6 @@ console
 test
 ~testQuick
 exit
+;clean ;test
+test
+exit

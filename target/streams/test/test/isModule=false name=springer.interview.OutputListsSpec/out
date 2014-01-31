@@ -2,7 +2,8 @@
 [0m[[0minfo[0m] [0m[37m[0m[37m[0m[0m
 [0m[[0minfo[0m] [0m[37m[0m[37mtoLists should[0m[37m[0m[0m
 [0m[[0minfo[0m] [0m[37m[0m[32m+[0m generate data to represent a 1 * 1 canvas[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0m[32m+[0m generate data to represent a 0 * 0 canvas[37m[0m[0m
 [0m[[0minfo[0m] [0m[37m[0m[37m[0m[0m
 [0m[[0minfo[0m] [0m[37m[0mTotal for specification OutputListsSpec[0m
-[0m[[0minfo[0m] [0m[34mFinished in 23 ms[0m[0m
-[0m[[0minfo[0m] [0m[34m[0m[34m1 example, 0 failure, 0 error[0m[0m
+[0m[[0minfo[0m] [0m[34mFinished in 25 ms[0m[0m
+[0m[[0minfo[0m] [0m[34m[0m[34m2 examples, 0 failure, 0 error[0m[0m
