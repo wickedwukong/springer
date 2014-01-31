@@ -9,24 +9,24 @@ import OutputLists._
 class OutputListsSpec extends Specification {
 
    "toLists" should {
-     "generate data to represent a 1 * 1 canvas" in {
+     "generate data to represent a canvas of" in {
 
-       toLists("C 1 1") must_== List(List("-", "-", "-"),
-                                     List("|", " ", "|"),
-                                     List("-", "-", "-"))
-     }
+       "1 * 1 dimension" in {
+         toLists("C 1 1") must_== List(List("-", "-", "-"),
+           List("|", " ", "|"),
+           List("-", "-", "-"))
+       }
 
-     "generate data to represent a 0 * 0 canvas" in {
+       "0 * 0 dimension" in {
+         toLists("C 0 0") must_== List(List("-", "-"),
+           List("-", "-"))
+       }
 
-       toLists("C 0 0") must_== List(List("-", "-"),
-                                     List("-", "-"))
-     }
-
-     "generate data to represent a 2 * 1 canvas" in {
-
-       toLists("C 2 1") must_== List(List("-", "-", "-", "-"),
-                                     List("|", " ", " ", "|"),
-                                     List("-", "-", "-", "-"))
+       "2 * 1 dimension" in {
+         toLists("C 2 1") must_== List(List("-", "-", "-", "-"),
+           List("|", " ", " ", "|"),
+           List("-", "-", "-", "-"))
+       }
      }
    }
  }
