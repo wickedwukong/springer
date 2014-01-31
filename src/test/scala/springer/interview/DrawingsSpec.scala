@@ -40,6 +40,26 @@ class DrawingsSpec extends Specification {
                                                                         List("|", "x", "|"),
                                                                         List("-", "-", "-"))
       }
+
+      "horizontal" in {
+        lineDrawing(1, 2, 2, 2)(List(List("-", "-", "-", "-"),
+                                     List("|", " ", " ", "|"),
+                                     List("|", " ", " ", "|"),
+                                     List("-", "-", "-", "-"))) must_== List(List("-", "-", "-", "-"),
+                                                                             List("|", " ", " ", "|"),
+                                                                             List("|", "x", "x", "|"),
+                                                                             List("-", "-", "-", "-"))
+      }
+
+      "vertical" in {
+        lineDrawing(1, 1, 1, 2)(List(List("-", "-", "-", "-"),
+                                     List("|", " ", " ", "|"),
+                                     List("|", " ", " ", "|"),
+                                     List("-", "-", "-", "-"))) must_== List(List("-", "-", "-", "-"),
+                                                                             List("|", "x", " ", "|"),
+                                                                             List("|", "x", " ", "|"),
+                                                                             List("-", "-", "-", "-"))
+      }
     }
   }
 

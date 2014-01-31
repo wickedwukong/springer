@@ -14,7 +14,8 @@ class Draw(instructionInput: Source, output: Writer) {
 
     val display = makeDisplay(printer) _
 
-    val drawings: Iterator[(List[List[String]]) => List[List[String]]] = instructionInput.getLines().map(toDrawing)
+    val drawings = instructionInput.getLines().toSeq.map(toDrawing)
+
     drawings.foldLeft(List(List[String]())) {
       (canvas, draw) =>
         val newDrawing: List[List[String]] = draw(canvas)
