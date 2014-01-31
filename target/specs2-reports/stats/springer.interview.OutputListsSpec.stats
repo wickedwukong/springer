@@ -1,8 +1,0 @@
-<springer.interview.OutputListsSpec-stats timestamp="1391191209609"><stats time="28" expectations="1" successes="1" examples="1"></stats></springer.interview.OutputListsSpec-stats>
-<springer.interview.OutputListsSpec-results timestamp="1391191287002"><result location="springer.interview.OutputListsSpec (OutputListsSpec.scala:20)" id="-1441315425"><stats time="82" expectations="1" failures="1" examples="1"></stats></result>
-</springer.interview.OutputListsSpec-results>
-<springer.interview.OutputListsSpec-stats timestamp="1391191287009"><stats time="23" expectations="2" failures="1" successes="1" examples="2"><trend><stats time="23" expectations="1" failures="1" examples="1"></stats></trend></stats></springer.interview.OutputListsSpec-stats>
-<springer.interview.OutputListsSpec-results timestamp="1391191351673"><result location="springer.interview.OutputListsSpec (OutputListsSpec.scala:19)" id="-1441315425"><stats time="40" expectations="1" failures="1" examples="1"></stats></result>
-</springer.interview.OutputListsSpec-results>
-<springer.interview.OutputListsSpec-stats timestamp="1391191351699"><stats time="27" expectations="2" failures="1" successes="1" examples="2"></stats></springer.interview.OutputListsSpec-stats>
-<springer.interview.OutputListsSpec-stats timestamp="1391191418225"><stats time="25" expectations="2" successes="2" examples="2"><trend><stats time="25" failures="-1" successes="1"></stats></trend></stats></springer.interview.OutputListsSpec-stats>
