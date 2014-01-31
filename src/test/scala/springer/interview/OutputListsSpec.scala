@@ -21,6 +21,13 @@ class OutputListsSpec extends Specification {
        toLists("C 0 0") must_== List(List("-", "-"),
                                      List("-", "-"))
      }
+
+     "generate data to represent a 2 * 1 canvas" in {
+
+       toLists("C 2 1") must_== List(List("-", "-", "-", "-"),
+                                     List("|", " ", " ", "|"),
+                                     List("-", "-", "-", "-"))
+     }
    }
  }
 
