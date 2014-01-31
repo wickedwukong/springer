@@ -18,7 +18,7 @@ object Drawings {
   }
 
   def lineDrawing(xStart: Int, yStart: Int, xEnd: Int, yEnd: Int): List[List[String]] => List[List[String]] = {
-    canvas => canvas.zipWithIndex.map {
+    _.zipWithIndex.map {
       case (row, rowIndex) if rowIndex >= yStart && rowIndex <= yEnd => {
         row.zipWithIndex map {
           case (cell, cellIndex) => if (cellIndex >= xStart && cellIndex <= xEnd) "x" else cell
