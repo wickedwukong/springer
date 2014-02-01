@@ -64,6 +64,34 @@ class DrawSpec extends Specification {
 
       canvas must_== oneLineOnCanvas
     }
+
+    "draw a rectangle" in {
+      val output: StringWriter = new StringWriter()
+
+      val string: Source = Source.fromString("C 4 3\nR 1 1 3 3")
+
+      new Draw(string, output).start()
+
+      val oneRectangleOnCanvas = """enter command:
+                              |------
+                              ||    |
+                              ||    |
+                              ||    |
+                              |------
+                              |enter command:
+                              |------
+                              ||xxx |
+                              ||x x |
+                              ||xxx |
+                              |------
+                              |enter command:""".stripMargin
+
+      val applicationOutput = Source.fromString(output.toString).getLines().toList
+
+      val canvas: String = applicationOutput.mkString("\n")
+
+      canvas must_== oneRectangleOnCanvas
+    }
   }
 }
 
