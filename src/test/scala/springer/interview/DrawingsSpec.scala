@@ -63,7 +63,25 @@ class DrawingsSpec extends Specification {
 
   "bucketFillDrawing" should {
     "generate data to fill an empty canvas" in {
-        1 must_== 1
+        bucketFill(1, 2, 'o')(List(List('-', '-', '-', '-'),
+                                   List('|', ' ', ' ', '|'),
+                                   List('|', ' ', ' ', '|'),
+                                   List('-', '-', '-', '-'))) must_== List(List('-', '-', '-', '-'),
+                                                                           List('|', 'o', 'o', '|'),
+                                                                           List('|', 'o', 'o', '|'),
+                                                                           List('-', '-', '-', '-'))
+    }
+
+    "generate data to fill a canvas divided by a horizontal line" in {
+        bucketFill(1, 3, 'o')(List(List('-', '-', '-', '-'),
+                                   List('|', ' ', ' ', '|'),
+                                   List('|', 'x', 'x', '|'),
+                                   List('|', ' ', ' ', '|'),
+                                   List('-', '-', '-', '-'))) must_== List(List('-', '-', '-', '-'),
+                                                                           List('|', ' ', ' ', '|'),
+                                                                           List('|', 'x', 'x', '|'),
+                                                                           List('|', 'o', 'o', '|'),
+                                                                           List('-', '-', '-', '-'))
     }
   }
 
