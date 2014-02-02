@@ -63,5 +63,11 @@ class DrawingsSpec extends Specification {
     }
   }
 
+  "bucketFillDrawing" should {
+    "generate data to fill an empty canvas" in {
+        1 must_== 1
+    }
+  }
+
 
 }

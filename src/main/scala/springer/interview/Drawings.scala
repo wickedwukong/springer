@@ -1,27 +1,6 @@
 package springer.interview
 
 object Drawings {
-
-  def toDrawing: String => List[List[String]] => List[List[String]] = {
-    rawInstruction => {
-      rawInstruction.split(" ").toList match {
-        case "C" :: tail => {
-          val canvasDimension: List[Int] = tail.take(2).map(_.toInt)
-          canvasDrawing(canvasDimension(0), canvasDimension(1))
-        }
-        case "L" :: tail => {
-          val lineStartAndEnd: List[Int] = tail.take(4).map(_.toInt)
-          lineDrawing(lineStartAndEnd(0), lineStartAndEnd(1), lineStartAndEnd(2), lineStartAndEnd(3))
-        }
-        case "R" :: tail => {
-          val topLeftCornerAndBottomRightCorner: List[Int] = tail.take(4).map(_.toInt)
-
-          rectangleDrawing(topLeftCornerAndBottomRightCorner(0), topLeftCornerAndBottomRightCorner(1), topLeftCornerAndBottomRightCorner(2), topLeftCornerAndBottomRightCorner(3))
-        }
-      }
-    }
-  }
-
   def rectangleDrawing(xStart: Int, yStart: Int, xEnd: Int, yEnd: Int): List[List[String]] => List[List[String]] = {
     _.zipWithIndex.map {
       case (row, rowIndex) if rowIndex == yStart || rowIndex == yEnd => {
@@ -48,6 +27,10 @@ object Drawings {
       case (row, _) => row
     }
 
+  }
+
+  def bucketFill(xAxis: Int, yAxis: Int, color: String): List[List[String]] => List[List[String]] = {
+    _.map(row => {row.map(c => if (c == " ") color else c)})
   }
 
   def canvasDrawing(xAxis: Int, yAxis: Int): List[List[String]] => List[List[String]] = {

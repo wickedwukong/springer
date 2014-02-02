@@ -7,14 +7,13 @@ import scala._
 class Draw(instructionInput: Source, output: Writer) {
 
   def start() {
-    import Drawings._
     val printer = new PrintWriter(output)
     printer.print("enter command:")
     printer.flush()
 
     val display = makeDisplay(printer) _
 
-    val drawings = instructionInput.getLines().toSeq.map(toDrawing)
+    val drawings = instructionInput.getLines().toSeq.map(toDrawing(_))
 
     drawings.foldLeft(List(List[String]())) {
       (canvas, draw) =>

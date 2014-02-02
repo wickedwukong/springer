@@ -92,6 +92,37 @@ class DrawSpec extends Specification {
 
       canvas must_== oneRectangleOnCanvas
     }
+
+    "bucket fill" in {
+      "fill an empty canvas" in {
+        val output: StringWriter = new StringWriter()
+
+        val string: Source = Source.fromString("C 4 3\nB 2 2 o")
+
+        new Draw(string, output).start()
+
+        val buckedFilledCanvas = """enter command:
+                                     |------
+                                     ||    |
+                                     ||    |
+                                     ||    |
+                                     |------
+                                     |enter command:
+                                     |------
+                                     ||oooo|
+                                     ||oooo|
+                                     ||oooo|
+                                     |------
+                                     |enter command:""".stripMargin
+
+        val applicationOutput = Source.fromString(output.toString).getLines().toList
+
+        val canvas: String = applicationOutput.mkString("\n")
+
+        canvas must_== buckedFilledCanvas
+      }
+    }
+
   }
 }
 
