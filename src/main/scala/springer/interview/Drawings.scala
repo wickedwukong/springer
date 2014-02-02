@@ -43,7 +43,7 @@ object Drawings {
           case (row, rowIndex) => {
             row.zipWithIndex.map {
               case (cell, columnIndex) => {
-                if (rowIndex == yAxis && columnIndex == xAxis && cell != color && cell != 'x') 'o'
+                if (rowIndex == yAxis && columnIndex == xAxis && cell != color && cell != 'x') color
                 else cell
               }
             }
