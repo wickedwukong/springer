@@ -18,7 +18,7 @@ object toDrawing {
           rectangleDrawing(topLeftCornerAndBottomRightCorner(0), topLeftCornerAndBottomRightCorner(1), topLeftCornerAndBottomRightCorner(2), topLeftCornerAndBottomRightCorner(3))
         }
         case "B" :: tail => {
-          val color = tail(2)
+          val color = tail(2).head
           val startingPoint: List[Int] = tail.take(2).map(_.toInt)
           bucketFill(startingPoint(0), startingPoint(1), color)
         }

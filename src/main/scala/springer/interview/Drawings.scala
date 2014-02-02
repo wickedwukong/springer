@@ -1,18 +1,18 @@
 package springer.interview
 
 object Drawings {
-  type Canvas = List[List[String]]
+  type Canvas = List[List[Char]]
 
   def rectangleDrawing(xStart: Int, yStart: Int, xEnd: Int, yEnd: Int): Canvas => Canvas = {
     _.zipWithIndex.map {
       case (row, rowIndex) if rowIndex == yStart || rowIndex == yEnd => {
         row.zipWithIndex map {
-          case (cell, cellIndex) => if (cellIndex >= xStart && cellIndex <= xEnd) "x" else cell
+          case (cell, cellIndex) => if (cellIndex >= xStart && cellIndex <= xEnd) 'x' else cell
         }
       }
       case (row, rowIndex) if rowIndex > yStart && rowIndex < yEnd => {
         row.zipWithIndex map {
-          case (cell, cellIndex) => if (cellIndex == xStart || cellIndex == xEnd) "x" else cell
+          case (cell, cellIndex) => if (cellIndex == xStart || cellIndex == xEnd) 'x' else cell
         }
       }
       case (row, _) => row
@@ -23,7 +23,7 @@ object Drawings {
     _.zipWithIndex.map {
       case (row, rowIndex) if rowIndex >= yStart && rowIndex <= yEnd => {
         row.zipWithIndex map {
-          case (cell, cellIndex) => if (cellIndex >= xStart && cellIndex <= xEnd) "x" else cell
+          case (cell, cellIndex) => if (cellIndex >= xStart && cellIndex <= xEnd) 'x' else cell
         }
       }
       case (row, _) => row
@@ -31,8 +31,8 @@ object Drawings {
 
   }
 
-  def bucketFill(xAxis: Int, yAxis: Int, color: String): Canvas => Canvas = {
-    _.map(row => {row.map(c => if (c == " ") color else c)})
+  def bucketFill(xAxis: Int, yAxis: Int, color: Char): Canvas => Canvas = {
+    _.map(row => {row.map(c => if (c == ' ') color else c)})
   }
 
   def canvasDrawing(xAxis: Int, yAxis: Int): Canvas => Canvas = {
@@ -41,10 +41,10 @@ object Drawings {
       val numberOfColumns = xAxis + 2
 
       (0 until numberOfRows).map {
-        case x if x == 0 || x == numberOfRows - 1 => 0.until(numberOfColumns).map(_ => "-").toList
+        case x if x == 0 || x == numberOfRows - 1 => 0.until(numberOfColumns).map(_ => '-').toList
         case _ => 0.until(numberOfColumns).map {
-          case x if x == 0 || x == numberOfColumns - 1 => "|"
-          case _ => " "
+          case x if x == 0 || x == numberOfColumns - 1 => '|'
+          case _ => ' '
         }.toList
       }.toList
     }

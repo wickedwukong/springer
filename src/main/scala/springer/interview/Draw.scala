@@ -3,6 +3,7 @@ package springer.interview
 import java.io._
 import scala.io.Source
 import scala._
+import springer.interview.Drawings.Canvas
 
 class Draw(instructionInput: Source, output: Writer) {
 
@@ -15,9 +16,9 @@ class Draw(instructionInput: Source, output: Writer) {
 
     val drawings = instructionInput.getLines().toSeq.map(toDrawing(_))
 
-    drawings.foldLeft(List(List[String]())) {
+    drawings.foldLeft(List(List[Char]())) {
       (canvas, draw) =>
-        val newDrawing: List[List[String]] = draw(canvas)
+        val newDrawing: Canvas = draw(canvas)
         display(newDrawing)
         newDrawing
     }
@@ -25,7 +26,7 @@ class Draw(instructionInput: Source, output: Writer) {
     printer.close()
   }
 
-  private def makeDisplay(printer: PrintWriter)(canvas: List[List[String]]): List[List[String]] = {
+  private def makeDisplay(printer: PrintWriter)(canvas: Canvas): Canvas = {
     canvas.foreach {
       line =>
         printer.println
