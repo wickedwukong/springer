@@ -14,16 +14,12 @@ class Draw(instructionInput: Source, output: Writer) {
 
     val display = makeDisplay(printer) _
 
-    val drawings = instructionInput.getLines().map(toDrawing(_))
-
-    drawings.foldLeft(List(List[Char]())) {
-      (canvas, draw) =>
-        val newDrawing: Canvas = draw(canvas)
-        display(newDrawing)
-        newDrawing
+    instructionInput.getLines().map {
+      case QuitCommand() => System.exit(0); printer.close(); null
+      case drawingCommand => toDrawing(drawingCommand)
+    }.foldLeft(List(List[Char]())) {
+      (canvas, draw) => display(draw(canvas))
     }
-
-    printer.close()
   }
 
   private def makeDisplay(printer: PrintWriter)(canvas: Canvas): Canvas = {
@@ -38,4 +34,8 @@ class Draw(instructionInput: Source, output: Writer) {
 
     canvas
   }
+}
+
+object QuitCommand {
+  def unapply(command: String) = { if (command.trim() == "Q") true else false }
 }
