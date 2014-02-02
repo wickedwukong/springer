@@ -1,7 +1,9 @@
 package springer.interview
 
 object Drawings {
-  def rectangleDrawing(xStart: Int, yStart: Int, xEnd: Int, yEnd: Int): List[List[String]] => List[List[String]] = {
+  type Canvas = List[List[String]]
+
+  def rectangleDrawing(xStart: Int, yStart: Int, xEnd: Int, yEnd: Int): Canvas => Canvas = {
     _.zipWithIndex.map {
       case (row, rowIndex) if rowIndex == yStart || rowIndex == yEnd => {
         row.zipWithIndex map {
@@ -17,7 +19,7 @@ object Drawings {
     }
   }
 
-  def lineDrawing(xStart: Int, yStart: Int, xEnd: Int, yEnd: Int): List[List[String]] => List[List[String]] = {
+  def lineDrawing(xStart: Int, yStart: Int, xEnd: Int, yEnd: Int): Canvas => Canvas = {
     _.zipWithIndex.map {
       case (row, rowIndex) if rowIndex >= yStart && rowIndex <= yEnd => {
         row.zipWithIndex map {
@@ -29,11 +31,11 @@ object Drawings {
 
   }
 
-  def bucketFill(xAxis: Int, yAxis: Int, color: String): List[List[String]] => List[List[String]] = {
+  def bucketFill(xAxis: Int, yAxis: Int, color: String): Canvas => Canvas = {
     _.map(row => {row.map(c => if (c == " ") color else c)})
   }
 
-  def canvasDrawing(xAxis: Int, yAxis: Int): List[List[String]] => List[List[String]] = {
+  def canvasDrawing(xAxis: Int, yAxis: Int): Canvas => Canvas = {
     _ => {
       val numberOfRows = yAxis + 2
       val numberOfColumns = xAxis + 2

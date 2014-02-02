@@ -2,7 +2,7 @@ package springer.interview
 
 object toDrawing {
   import Drawings._
-  def apply(rawInstruction: String):  List[List[String]] => List[List[String]] = {
+  def apply(rawInstruction: String):  Canvas => Canvas = {
       rawInstruction.split(" ").toList match {
         case "C" :: tail => {
           val canvasDimension: List[Int] = tail.take(2).map(_.toInt)
