@@ -14,7 +14,7 @@ class Draw(instructionInput: Source, output: Writer) {
 
     val display = makeDisplay(printer) _
 
-    val drawings = instructionInput.getLines().toSeq.map(toDrawing(_))
+    val drawings = instructionInput.getLines().map(toDrawing(_))
 
     drawings.foldLeft(List(List[Char]())) {
       (canvas, draw) =>
