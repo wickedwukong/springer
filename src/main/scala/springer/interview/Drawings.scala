@@ -28,11 +28,35 @@ object Drawings {
       }
       case (row, _) => row
     }
-
   }
 
   def bucketFill(xAxis: Int, yAxis: Int, color: Char): Canvas => Canvas = {
-    _.map(row => {row.map(c => if (c == ' ') color else c)})
+
+
+    def go(canvas: Canvas, xAxis: Int, yAxis: Int, color: Char): Canvas = {
+      if (xAxis < 1 || xAxis > canvas(0).size - 2 || yAxis < 1 || yAxis > canvas.size - 2)
+        canvas
+      else if (canvas(yAxis)(xAxis) == color || canvas(yAxis)(xAxis) == 'x')
+        canvas
+      else {
+        val c1 = canvas.zipWithIndex.map {
+          case (row, rowIndex) => {
+            row.zipWithIndex.map {
+              case (cell, columnIndex) => {
+                if (rowIndex == yAxis && columnIndex == xAxis && cell != color && cell != 'x') 'o'
+                else cell
+              }
+            }
+          }
+        }
+        val c2 = go(c1, xAxis + 1, yAxis, color)
+        val c3 = go(c2, xAxis, yAxis + 1, color)
+        val c4 = go(c3, xAxis - 1, yAxis, color)
+        go(c4, xAxis, yAxis - 1, color)
+      }
+    }
+
+    go(_, xAxis, yAxis, color)
   }
 
   def canvasDrawing(xAxis: Int, yAxis: Int): Canvas => Canvas = {
