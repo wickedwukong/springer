@@ -83,6 +83,20 @@ class DrawingsSpec extends Specification {
                                                                            List('|', 'o', 'o', '|'),
                                                                            List('-', '-', '-', '-'))
     }
+
+    "generate data to fill a rectangle" in {
+        bucketFill(2, 2, '0')(List(List('-', '-', '-', '-', '-'),
+                                   List('|', 'x', 'x', 'x', '|'),
+                                   List('|', 'x', ' ', 'x', '|'),
+                                   List('|', 'x', 'x', 'x', '|'),
+                                   List('|', ' ', ' ', ' ', '|'),
+                                   List('-', '-', '-', '-', '-'))) must_== List(List('-', '-', '-', '-', '-'),
+                                                                                List('|', 'x', 'x', 'x', '|'),
+                                                                                List('|', 'x', '0', 'x', '|'),
+                                                                                List('|', 'x', 'x', 'x', '|'),
+                                                                                List('|', ' ', ' ', ' ', '|'),
+                                                                                List('-', '-', '-', '-', '-'))
+    }
   }
 
 
