@@ -31,14 +31,18 @@ object Drawings {
   }
 
   def bucketFill(xAxis: Int, yAxis: Int, color: Char): Canvas => Canvas = {
+    def alreadyBucketFilled(canvas: Canvas, xAxis: Int, yAxis: Int) = canvas(yAxis)(xAxis) == color
+    def alreadyPainted(canvas: Canvas, xAxis: Int, yAxis: Int) = canvas(yAxis)(xAxis) == 'x'
+    def outSidePaintableCanvasArea(canvas: Canvas, xAxis: Int, yAxis: Int) = xAxis < 1 || xAxis > canvas(0).size - 2 || yAxis < 1 || yAxis > canvas.size - 2
 
-
-    def go(canvas: Canvas, xAxis: Int, yAxis: Int, color: Char): Canvas = {
-      if (xAxis < 1 || xAxis > canvas(0).size - 2 || yAxis < 1 || yAxis > canvas.size - 2)
+    canvas =>
+      if (alreadyBucketFilled(canvas, xAxis, yAxis))
         canvas
-      else if (canvas(yAxis)(xAxis) == color || canvas(yAxis)(xAxis) == 'x')
+      else if (alreadyPainted(canvas: Canvas, xAxis: Int, yAxis: Int))
         canvas
-      else {
+      else if (outSidePaintableCanvasArea(canvas, xAxis, yAxis)) {
+        canvas
+      } else {
         val c1 = canvas.zipWithIndex.map {
           case (row, rowIndex) => {
             row.zipWithIndex.map {
@@ -49,14 +53,11 @@ object Drawings {
             }
           }
         }
-        val c2 = go(c1, xAxis + 1, yAxis, color)
-        val c3 = go(c2, xAxis, yAxis + 1, color)
-        val c4 = go(c3, xAxis - 1, yAxis, color)
-        go(c4, xAxis, yAxis - 1, color)
+        val c2 = bucketFill(xAxis + 1, yAxis, color)(c1)
+        val c3 = bucketFill(xAxis, yAxis + 1, color)(c2)
+        val c4 = bucketFill(xAxis - 1, yAxis, color)(c3)
+        bucketFill(xAxis, yAxis - 1, color)(c4)
       }
-    }
-
-    go(_, xAxis, yAxis, color)
   }
 
   def canvasDrawing(xAxis: Int, yAxis: Int): Canvas => Canvas = {
