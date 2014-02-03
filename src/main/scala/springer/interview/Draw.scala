@@ -16,7 +16,14 @@ class Draw(instructionInput: Source, output: Writer) {
 
     instructionInput.getLines().map {
       case QuitCommand() => System.exit(0); printer.close(); null
-      case drawingCommand => toDrawing(drawingCommand)
+      case SupportedCommand(command) => command
+      case nonSupportedCommand => {
+        canvas: Canvas => {
+          printer.print(s"command not supported: [$nonSupportedCommand]")
+          printer.flush()
+          canvas
+        }
+      }
     }.foldLeft(List(List[Char]())) {
       (canvas, draw) => display(draw(canvas))
     }
