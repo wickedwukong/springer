@@ -34,7 +34,7 @@ class DrawSpec extends Specification {
 
       applicationOutput(0) must_== "enter command:"
       
-      val canvas: String = applicationOutput.tail.mkString("\n")
+      val canvas: String = applicationOutput.tail.mkString(System.getProperty("line.separator"))
       
       canvas must_== twoTwoCanvas
     }
@@ -60,7 +60,7 @@ class DrawSpec extends Specification {
 
       val applicationOutput = Source.fromString(output.toString).getLines().toList
 
-      val canvas: String = applicationOutput.mkString("\n")
+      val canvas: String = applicationOutput.mkString(System.getProperty("line.separator"))
 
       canvas must_== oneLineOnCanvas
     }
@@ -88,7 +88,7 @@ class DrawSpec extends Specification {
 
       val applicationOutput = Source.fromString(output.toString).getLines().toList
 
-      val canvas: String = applicationOutput.mkString("\n")
+      val canvas: String = applicationOutput.mkString(System.getProperty("line.separator"))
 
       canvas must_== oneRectangleOnCanvas
     }
@@ -117,7 +117,7 @@ class DrawSpec extends Specification {
 
         val applicationOutput = Source.fromString(output.toString).getLines().toList
 
-        val canvas: String = applicationOutput.mkString("\n")
+        val canvas: String = applicationOutput.mkString(System.getProperty("line.separator"))
 
         canvas must_== buckedFilledCanvas
       }
@@ -151,12 +151,11 @@ class DrawSpec extends Specification {
 
         val applicationOutput = Source.fromString(output.toString).getLines().toList
 
-        val canvas: String = applicationOutput.mkString("\n")
+        val canvas: String = applicationOutput.mkString(System.getProperty("line.separator"))
 
         canvas must_== buckedFilledCanvas
       }
     }
-
   }
 }
 
