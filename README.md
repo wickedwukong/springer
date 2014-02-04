@@ -26,6 +26,8 @@ All commands: C, L, R, B and Q
 
 Report a friendly message when unsupported commands are entered.
 
+Prevent lines from going outside canvas, and over the edges of the canvas
+
 4. What are NOT implemented:
 
 Edge cases: e.g lines run out of canvas etc
