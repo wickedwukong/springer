@@ -1,8 +1,9 @@
-package springer.interview
+package springer.interview.acceptance
 
 import org.specs2.mutable.Specification
 import java.io.StringWriter
 import scala.io.Source
+import springer.interview.Draw
 
 class DrawSpec extends Specification {
 
