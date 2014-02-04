@@ -19,11 +19,12 @@ object Drawings {
     }
   }
 
-  def lineDrawing(xStart: Int, yStart: Int, xEnd: Int, yEnd: Int): Canvas => Canvas = {
-    _.zipWithIndex.map {
-      case (row, rowIndex) if rowIndex >= yStart && rowIndex <= yEnd => {
+  def lineDrawing(xStart: Int, yStart: Int, xEnd: Int, yEnd: Int): Canvas => Canvas  = {
+    canvas =>
+      canvas.zipWithIndex.map {
+      case (row, rowIndex) if rowIndex >= yStart && rowIndex > 0 && rowIndex <= yEnd && rowIndex < canvas.size - 1 => {
         row.zipWithIndex map {
-          case (cell, cellIndex) => if (cellIndex >= xStart && cellIndex <= xEnd) 'x' else cell
+          case (cell, cellIndex) => if (cellIndex >= xStart && cellIndex <= xEnd && cellIndex > 0) 'x' else cell
         }
       }
       case (row, _) => row

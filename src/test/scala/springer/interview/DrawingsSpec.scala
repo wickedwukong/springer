@@ -58,6 +58,36 @@ class DrawingsSpec extends Specification {
                                                                              List('|', 'x', ' ', '|'),
                                                                              List('-', '-', '-', '-'))
       }
+
+      "vertical line does not go out of the canvas" in {
+        lineDrawing(1, 1, 1, 3)(List(List('-', '-', '-', '-'),
+                                     List('|', ' ', ' ', '|'),
+                                     List('|', ' ', ' ', '|'),
+                                     List('-', '-', '-', '-'))) must_== List(List('-', '-', '-', '-'),
+                                                                             List('|', 'x', ' ', '|'),
+                                                                             List('|', 'x', ' ', '|'),
+                                                                             List('-', '-', '-', '-'))
+      }
+
+      "horizontal does not go out of the canvas" in {
+        lineDrawing(1, 1, 2, 1)(List(List('-', '-', '-', '-'),
+                                     List('|', ' ', ' ', '|'),
+                                     List('|', ' ', ' ', '|'),
+                                     List('-', '-', '-', '-'))) must_== List(List('-', '-', '-', '-'),
+                                                                             List('|', 'x', 'x', '|'),
+                                                                             List('|', ' ', ' ', '|'),
+                                                                             List('-', '-', '-', '-'))
+      }
+
+      "less than 1 coordinates starts from 1 " in {
+        lineDrawing(0, 1, 2, 1)(List(List('-', '-', '-', '-'),
+                                     List('|', ' ', ' ', '|'),
+                                     List('|', ' ', ' ', '|'),
+                                     List('-', '-', '-', '-'))) must_== List(List('-', '-', '-', '-'),
+                                                                             List('|', 'x', 'x', '|'),
+                                                                             List('|', ' ', ' ', '|'),
+                                                                             List('-', '-', '-', '-'))
+      }
     }
   }
 
