@@ -14,19 +14,25 @@ class Draw(instructionInput: Source, output: Writer) {
 
     val display = makeDisplay(printer) _
 
-    instructionInput.getLines().map {
-      case QuitCommand() => System.exit(0); printer.close(); null
-      case SupportedCommand(command) => command
-      case nonSupportedCommand => {
-        canvas: Canvas => {
-          printer.print(s"command not supported: [$nonSupportedCommand]")
-          printer.flush()
-          canvas
-        }
-      }
-    }.foldLeft(List(List[Char]())) {
-      (canvas, draw) => display(draw(canvas))
+    instructionInput.getLines()
+      .map(SupportedCommand(_)).takeWhile(_.isDefined)
+      .foldLeft(List(List[Char]())) {
+      (canvas, draw) => display(draw.get(canvas))
     }
+
+//    instructionInput.getLines().map {
+//      case QuitCommand() => None
+//      case SupportedCommand(command) => command
+//      case nonSupportedCommand => {
+//        canvas: Canvas => {
+//          printer.print(s"command not supported: [$nonSupportedCommand]")
+//          printer.flush()
+//          canvas
+//        }
+//      }
+//    }.takeWhile(_.isDefined).foldLeft(List(List[Char]())) {
+//      (canvas, draw) => display(draw(canvas))
+//    }
   }
 
   private def makeDisplay(printer: PrintWriter)(canvas: Canvas): Canvas = {
