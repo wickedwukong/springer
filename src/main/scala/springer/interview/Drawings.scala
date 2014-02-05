@@ -19,19 +19,20 @@ object Drawings {
     }
   }
 
-  def lineDrawing(xStart: Int, yStart: Int, xEnd: Int, yEnd: Int): Canvas => Canvas  = {
+  def lineDrawing(xStart: Int, yStart: Int, xEnd: Int, yEnd: Int): Canvas => Canvas = {
     canvas =>
       canvas.zipWithIndex.map {
-      case (row, rowIndex) if rowIndex >= yStart && rowIndex > 0 && rowIndex <= yEnd && rowIndex < canvas.size - 1 => {
-        row.zipWithIndex map {
-          case (cell, cellIndex) => if (cellIndex >= xStart && cellIndex <= xEnd && cellIndex > 0) 'x' else cell
+        case (row, rowIndex) if rowIndex >= yStart && rowIndex > 0 && rowIndex <= yEnd && rowIndex < canvas.size - 1 => {
+          row.zipWithIndex map {
+            case (cell, cellIndex) => if (cellIndex >= xStart && cellIndex <= xEnd && cellIndex > 0) 'x' else cell
+          }
         }
+        case (row, _) => row
       }
-      case (row, _) => row
-    }
   }
 
   def bucketFill(xAxis: Int, yAxis: Int, color: Char): Canvas => Canvas = {
+
     def alreadyBucketFilled(canvas: Canvas, xAxis: Int, yAxis: Int) = canvas(yAxis)(xAxis) == color
     def alreadyPainted(canvas: Canvas, xAxis: Int, yAxis: Int) = canvas(yAxis)(xAxis) == 'x'
     def outSidePaintableCanvasArea(canvas: Canvas, xAxis: Int, yAxis: Int) = xAxis < 1 || xAxis > canvas(0).size - 2 || yAxis < 1 || yAxis > canvas.size - 2
@@ -44,20 +45,26 @@ object Drawings {
       else if (outSidePaintableCanvasArea(canvas, xAxis, yAxis)) {
         canvas
       } else {
-        val c1 = canvas.zipWithIndex.map {
-          case (row, rowIndex) => {
-            row.zipWithIndex.map {
-              case (cell, columnIndex) => {
-                if (rowIndex == yAxis && columnIndex == xAxis && cell != color && cell != 'x') color
-                else cell
+        def drawCanvas(xAxis: Int, yAxis: Int, color: Char): Canvas => Canvas = {
+          _.zipWithIndex.map {
+            case (row, rowIndex) => {
+              row.zipWithIndex.map {
+                case (cell, columnIndex) => {
+                  if (rowIndex == yAxis && columnIndex == xAxis && cell != color && cell != 'x') color
+                  else cell
+                }
               }
             }
           }
         }
-        val c2 = bucketFill(xAxis + 1, yAxis, color)(c1)
-        val c3 = bucketFill(xAxis, yAxis + 1, color)(c2)
-        val c4 = bucketFill(xAxis - 1, yAxis, color)(c3)
-        bucketFill(xAxis, yAxis - 1, color)(c4)
+        List((xAxis, yAxis, color),
+          (xAxis + 1, yAxis, color),
+          (xAxis, yAxis + 1, color),
+          (xAxis - 1, yAxis, color),
+          (xAxis, yAxis - 1, color)
+        ).foldLeft(drawCanvas(xAxis, yAxis, color)(canvas)) {
+          (canvas, step) => bucketFill(step._1, step._2, step._3)(canvas)
+        }
       }
   }
 
